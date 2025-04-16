@@ -1,4 +1,4 @@
- workflows:
+workflows:
   ios-workflow:
     name: iOS Build & Upload
     max_build_duration: 60
@@ -6,15 +6,9 @@
       flutter: stable
       xcode: latest
       cocoapods: default
-      ios_signing:
-        distribution_type: app_store  # หรือ development หรือ ad_hoc ตามที่คุณต้องการ
-        bundle_identifier: th.ac.chomsurang.school  # แก้ไขเป็น bundle identifier ของแอปคุณ
     scripts:
       - name: Install dependencies
         script: flutter pub get
-      - name: Set up code signing
-        script: |
-          app-store-connect fetch-signing-files $(BUNDLE_ID) --type IOS_APP_STORE --create
       - name: Build .ipa
         script: flutter build ipa --release --build-name=3.1.0 --build-number=29
     artifacts:
@@ -30,7 +24,3 @@
           -----END PRIVATE KEY-----
         key_id: WJBX749WAD
         issuer_id: 3cdd00be-36f5-4047-a99e-439c53b66d13
-
-
-
-       
