@@ -16,7 +16,6 @@ workflows:
     publishing:
       app_store_connect:
         auth:
-          integration: ios-upload
           type: api_key
           apple_id: dorayagi@gmail.com
           api_key_id: WJBX749WAD
