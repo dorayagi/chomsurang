@@ -15,4 +15,12 @@ workflows:
       - build/ios/ipa/*.ipa
     publishing:
       app_store_connect:
-        auth: integration
+        api_key: |
+          -----BEGIN PRIVATE KEY-----
+          MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgDq32loCMN1jwqE9K
+          qXUOoH/e4sKcNDp9HBVnE+LjdzqgCgYIKoZIzj0DAQehRANCAASTJjgh1ih6AKCH
+          TegvwSQnEx3u0KyaerLPKpGmfOmsEqyBxaXLzKo14MT8Sd8FhFDC7w8Wpc48Z+yS
+          7sxN2Ya6
+          -----END PRIVATE KEY-----
+        key_id: WJBX749WAD
+        issuer_id: 3cdd00be-36f5-4047-a99e-439c53b66d13
